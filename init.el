@@ -26,7 +26,7 @@
        ;;helm                ; the *other* search engine for love and life
        ;;ido                 ; the other *other* search engine...
        ;;ivy                 ; a search engine for love and life
-       vertico               ; the search engine of the future
+       (vertico +childframe +icons) ; the search engine of the future
 
        :ui
        ;;deft                ; notational velocity for Emacs
@@ -48,7 +48,7 @@
        unicode               ; extended unicode support for various languages
        (vc-gutter +pretty)   ; vcs diff in the fringe
        vi-tilde-fringe       ; fringe tildes to mark beyond EOB
-       window-select         ; visually switch windows
+       (window-select +numbers +switch-window)         ; visually switch windows
        workspaces            ; tab emulation, persistence & separate workspaces
        ;;zen                 ; distraction-free coding or writing
 
@@ -67,11 +67,11 @@
        ;;word-wrap           ; soft wrapping with language-aware indent
 
        :emacs
-       dired                 ; making dired pretty [functional]
+       (dired +dirvish +icons)                 ; making dired pretty [functional]
        electric              ; smarter, keyword-based electric-indent
        eww                   ; the internet is gross
-       ibuffer               ; interactive buffer management
-       undo                  ; persistent, smarter undo for your inevitable mistakes
+       (ibuffer +icons)               ; interactive buffer management
+       (undo +tree)                  ; persistent, smarter undo for your inevitable mistakes
        vc                    ; version-control and Emacs, sitting in a tree
 
        :term
@@ -96,7 +96,7 @@
        ein                   ; tame Jupyter notebooks with emacs
        (eval +overlay)       ; run code, run (also, repls)
        lookup                ; navigate your code and its documentation
-       lsp                   ; M-x vscode
+       (lsp +peek +eglot)    ; M-x vscode
        magit                 ; a git porcelain for Emacs
        make                  ; run make tasks from Emacs
        pass                  ; password manager for nerds
